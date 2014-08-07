@@ -12,7 +12,7 @@ To solve a system of linear equations the Gaussian elimination have been used.
 
     $ proj input_image [output_width] [output_height]
 
-The `Input image` window will appears, then click four corners clockwise from the upper left to the lower left.
+The `Input image` window appears. Next, click four corners clockwise from the upper left to the lower left. The homography matrix of the transformation is calculated automatically and the transformed image appears in the `Output image`. The windows close when you press any key.
 
 ## Requirement
 OpenCV 2.4
