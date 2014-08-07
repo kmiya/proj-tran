@@ -93,7 +93,7 @@ void Transform::transformByMatrix(Mat& in, const Mat& h, Mat* out) {
       const int ch = in.channels();
       double xs_ = h.at<double>(0, 0) * x + h.at<double>(0, 1) * y + h.at<double>(0, 2);
       double ys_ = h.at<double>(1, 0) * x + h.at<double>(1, 1) * y + h.at<double>(1, 2);
-      double s  = h.at<double>(2, 0) * x + h.at<double>(2, 1) * y + h.at<double>(2, 2);
+      double s   = h.at<double>(2, 0) * x + h.at<double>(2, 1) * y + h.at<double>(2, 2);
       int xs = static_cast<int>(xs_ / s);
       int ys = static_cast<int>(ys_ / s);
       if (xs >= out->cols || ys >= out->rows || xs < 0 || ys < 0) {
@@ -131,7 +131,7 @@ void Transform::solveLinearEquations (const Mat& left, const Mat& right, Mat* re
 {
   // error check
   if (left.cols != right.rows || left.rows != right.rows || right.cols != 1)
-         exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE);
   // create coefficient matrix
   Mat m(left.rows, left.cols+1, CV_64F);
   Mat roi = Mat(m, Rect(Point(0, 0), left.size()));
