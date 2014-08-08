@@ -61,8 +61,7 @@ void usage() {
 // **********************************************************
 // proj::onMouse()
 // ----------------------------------------------------------
-// Draw circle when mouse will clicked.
-// If there are 4 circles, then transformation will start.
+// Draw a circle when click the right mouse button.
 //
 void onMouse (int event, int x, int y, int flags, void *param = NULL)
 {
